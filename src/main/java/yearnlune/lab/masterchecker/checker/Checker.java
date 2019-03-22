@@ -23,6 +23,13 @@ public abstract class Checker {
         return matcher.matches();
     }
 
+    public boolean find(String value) {
+        Pattern pattern = Pattern.compile(regex, Pattern.UNICODE_CASE | Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(value);
+
+        return matcher.find();
+    }
+
     protected void setRegex(String regex) {
         this.regex = regex;
     }
