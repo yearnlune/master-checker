@@ -30,4 +30,13 @@ public class MastercheckerApplicationTests {
         }
     }
 
+    @Test
+    public void checkEmail() {
+        String[] values = {"abc@email.com", "dadfa@dfafg.co.kr", "aba24124@feafae"};
+
+        for (String value : values) {
+            boolean check = MasterChecker.check(MasterChecker.Type.EMAIL, value);
+            System.out.println(check ? "true" : "false");
+        }
+    }
 }
